@@ -1,12 +1,12 @@
 package ar.com.sistemasnea.diexample.repositories;
 
-import ar.com.sistemasnea.diexample.database.DIDataStore;
+import ar.com.sistemasnea.diexample.database.DataStore;
 
-public class DiRepo {
+public class DiRepoImpl implements Repo {
 
-    private DIDataStore store;
+    private DataStore store;
 
-    public DiRepo(DIDataStore store) {
+    public DiRepoImpl(DataStore store) {
         this.store = store;
     }
 

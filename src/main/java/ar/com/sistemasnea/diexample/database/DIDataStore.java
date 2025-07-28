@@ -1,6 +1,6 @@
 package ar.com.sistemasnea.diexample.database;
 
-public class DIDataStore {
+public class DIDataStore implements DataStore{
     private String user;
     private String password;
     private String url;
