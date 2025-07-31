@@ -1,7 +1,9 @@
 package ar.com.sistemasnea.diexample.repositories;
 
 import ar.com.sistemasnea.diexample.database.DataStore;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DiRepoImpl implements Repo {
 
     private DataStore store;

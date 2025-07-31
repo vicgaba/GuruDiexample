@@ -1,7 +1,9 @@
 package ar.com.sistemasnea.diexample.controller;
 
 import ar.com.sistemasnea.diexample.service.DiService;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DiController {
     private DiService service;
 
