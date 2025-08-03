@@ -1,7 +1,9 @@
 package ar.com.sistemasnea.diexample.service;
 
 import ar.com.sistemasnea.diexample.repositories.Repo;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DiServiceImpl implements DiService {
 
     private Repo repo;
