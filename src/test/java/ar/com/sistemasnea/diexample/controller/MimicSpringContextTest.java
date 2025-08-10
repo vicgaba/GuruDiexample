@@ -6,6 +6,8 @@ import ar.com.sistemasnea.diexample.repositories.DiRepoImpl;
 import ar.com.sistemasnea.diexample.repositories.Repo;
 import ar.com.sistemasnea.diexample.service.DiService;
 import ar.com.sistemasnea.diexample.service.DiServiceImpl;
+import ar.com.sistemasnea.diexample.service.EmailService;
+import ar.com.sistemasnea.diexample.service.SmsService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -32,7 +34,7 @@ public class MimicSpringContextTest {
         addBean("repo", new DiRepoImpl(
                 (DataStore) getBean("dataStore")
         ));
-        addBean("diService", new DiServiceImpl((Repo) getBean("repo")));
+        addBean("diService", new DiServiceImpl((Repo) getBean("repo"), new EmailService(), new SmsService()));
         addBean( "diController", new DiController((DiService) getBean("diService")));
     }
 

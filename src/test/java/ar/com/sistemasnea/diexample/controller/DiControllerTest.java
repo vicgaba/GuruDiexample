@@ -6,6 +6,8 @@ import ar.com.sistemasnea.diexample.repositories.DiRepoImpl;
 import ar.com.sistemasnea.diexample.repositories.Repo;
 import ar.com.sistemasnea.diexample.service.DiServiceImpl;
 import ar.com.sistemasnea.diexample.service.DiService;
+import ar.com.sistemasnea.diexample.service.EmailService;
+import ar.com.sistemasnea.diexample.service.SmsService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +24,7 @@ public class DiControllerTest {
     void setup() {
         diDataStore = new DIDataStore("testUser", "testPassword", "testUrl");
         diRepo = new DiRepoImpl(diDataStore);
-        diService = new DiServiceImpl(diRepo);
+        diService = new DiServiceImpl(diRepo, new EmailService(), new SmsService());
         diController = new DiController(diService);
     }
 

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("!spanish") // This will be active when the 'spanish' profile is not active
+@Profile("!spanish & !polish") // This will be active when the 'spanish' profile is not active
 public class DIDataStore implements DataStore{
     private String user;
     private String password;

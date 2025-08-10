@@ -12,9 +12,9 @@ public class PolishDataStore implements DataStore{
     private String password;
     private String url;
 
-    public PolishDataStore(@Value("jt") String user,
-                           @Value("1234") String password,
-                           @Value("jdbc:mysql://localhost:3306/test") String url){
+    public PolishDataStore(@Value("${guru.sfg.user}") String user,
+                           @Value("${guru.sfg.password}") String password,
+                           @Value("${guru.sfg.url}") String url){
         this.user =user;
         this.password =password;
         this.url =url;
